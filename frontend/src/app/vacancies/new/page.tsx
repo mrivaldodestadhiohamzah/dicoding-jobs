@@ -30,7 +30,7 @@ export default function CreateVacancyPage() {
       <div className="form-heading">
         <p className="eyebrow">FOR EMPLOYERS</p>
         <h1>Post a vacancy</h1>
-        <p>Share the context candidates need to decide whether your role is the right next step.</p>
+        <p>Describe the role clearly so candidates can decide whether it fits.</p>
       </div>
       <VacancyForm
         onSubmit={handleSubmit}

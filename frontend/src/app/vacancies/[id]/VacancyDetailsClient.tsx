@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { ApiError, getVacancy } from "@/lib/api";
 import { LoadingState, NotFoundState } from "@/components/StatusStates";
+import { CompanyMark } from "@/components/CompanyMark";
 
 export default function VacancyDetailsClient({ id }: { id: string }) {
   const vacancyQuery = useQuery({
@@ -43,7 +44,7 @@ export default function VacancyDetailsClient({ id }: { id: string }) {
             <p className="eyebrow">{vacancy.company}</p>
             <h1>{vacancy.title}</h1>
           </div>
-          <span className="company-initial large" aria-hidden="true">{vacancy.company.charAt(0).toUpperCase()}</span>
+          <CompanyMark large />
         </div>
         <div className="detail-meta" aria-label="Vacancy information">
           <div><span>Location</span><strong>{vacancy.location}</strong></div>
@@ -55,7 +56,7 @@ export default function VacancyDetailsClient({ id }: { id: string }) {
           <div className="description-copy">{vacancy.description.split(/\n+/).map((paragraph, index) => <p key={`${vacancy.id}-${index}`}>{paragraph}</p>)}</div>
         </div>
         <div className="detail-footer">
-          <p>Interested in this role? Reach out to {vacancy.company} directly.</p>
+          <p>Questions about this role? Follow up with the employer through its usual hiring channel.</p>
           <Link className="button button-primary" href="/">Browse more roles</Link>
         </div>
       </article>

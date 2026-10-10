@@ -26,13 +26,13 @@ export default function Home() {
       <section className="hero-shell">
         <div className="hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow">DICODING JOBS / 2026</p>
-            <h1>Find work that moves you.</h1>
-            <p className="hero-description">A considered place to discover roles at teams building the next useful thing.</p>
+            <p className="eyebrow">DICODING JOBS / OPEN ROLES</p>
+            <h1>Find your next role.</h1>
+            <p className="hero-description">Explore open positions and search by job title.</p>
           </div>
           <div className="hero-aside">
             <span className="aside-number">01</span>
-            <p>Browse open roles<br />from thoughtful teams.</p>
+            <p>Search by title<br />to get started.</p>
           </div>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">OPEN POSITIONS</p>
-            <h2 id="vacancy-heading">Browse vacancies</h2>
+            <h2 id="vacancy-heading">Open positions</h2>
           </div>
           {!vacanciesQuery.isLoading && !vacanciesQuery.isError && (
             <p className="result-count" role="status">{vacanciesQuery.data?.meta.total ?? 0} {vacanciesQuery.data?.meta.total === 1 ? "role" : "roles"}</p>
@@ -60,7 +60,7 @@ export default function Home() {
       <section className="employer-band" aria-label="For employers">
         <div>
           <p className="eyebrow">FOR EMPLOYERS</p>
-          <h2>Have a role worth sharing?</h2>
+          <h2>Hiring for your next role?</h2>
         </div>
         <Link className="button button-light" href="/vacancies/new">Post a vacancy <span aria-hidden="true">↗</span></Link>
       </section>

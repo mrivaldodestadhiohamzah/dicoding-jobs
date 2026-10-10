@@ -4,7 +4,7 @@ test.describe("vacancy discovery", () => {
   test("lists vacancies, searches by title, and opens the matching detail", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.getByRole("heading", { name: "Browse vacancies" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Open positions" })).toBeVisible();
     await expect(page.getByTestId("job-card").first()).toBeVisible();
 
     const search = page.getByRole("searchbox", { name: "Search by job title" });
@@ -15,7 +15,7 @@ test.describe("vacancy discovery", () => {
     await page.getByRole("link", { name: /View Senior Frontend Engineer/ }).click();
     await expect(page).toHaveURL(/\/vacancies\/\d+$/);
     await expect(page.getByTestId("vacancy-details")).toContainText("Senior Frontend Engineer");
-    await expect(page.getByTestId("vacancy-details")).toContainText("Northstar Labs");
+    await expect(page.getByTestId("vacancy-details")).toContainText("Bumi Belanja");
   });
 
   test("shows a useful empty state for a search with no matches", async ({ page }) => {
@@ -32,7 +32,7 @@ test.describe("vacancy discovery", () => {
   test("allows a recruiter to publish a vacancy through the API", async ({ page }) => {
     await page.goto("/vacancies/new");
     await page.getByLabel("Job title").fill("Operations Coordinator");
-    await page.getByLabel("Company").fill("Field Notes Co.");
+    await page.getByLabel("Company").fill("Kawan Kerja");
     await page.getByLabel("Location").fill("Surabaya, Indonesia");
     await page.getByLabel("Employment type").selectOption("Part-time");
     await page.getByLabel("Work arrangement").selectOption("Remote");
@@ -41,6 +41,6 @@ test.describe("vacancy discovery", () => {
 
     await expect(page).toHaveURL(/\/vacancies\/\d+$/);
     await expect(page.getByTestId("vacancy-details")).toContainText("Operations Coordinator");
-    await expect(page.getByTestId("vacancy-details")).toContainText("Field Notes Co.");
+    await expect(page.getByTestId("vacancy-details")).toContainText("Kawan Kerja");
   });
 });

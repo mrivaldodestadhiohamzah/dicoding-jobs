@@ -11,7 +11,7 @@ class VacancyTest extends TestCase
     {
         $vacancy = new Vacancy([
             'title' => 'Frontend Engineer',
-            'company' => 'Northstar Labs',
+            'company' => 'Bumi Belanja',
             'location' => 'Jakarta',
             'employment_type' => 'Full-time',
             'work_arrangement' => 'Hybrid',

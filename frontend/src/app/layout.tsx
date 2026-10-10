@@ -4,7 +4,7 @@ import { QueryProvider } from "@/components/QueryProvider";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Dicoding Jobs | Find work that moves you",
+  title: "Dicoding Jobs | Open roles",
   description: "Browse thoughtful opportunities from growing teams.",
 };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Vacancy } from "@/types/vacancy";
+import { CompanyMark } from "@/components/CompanyMark";
 
 function formatDescription(description: string): string {
   return description.length > 150 ? `${description.slice(0, 150).trimEnd()}…` : description;
@@ -9,7 +10,7 @@ export function JobCard({ vacancy }: { vacancy: Vacancy }) {
   return (
     <article className="job-card" data-testid="job-card">
       <div className="job-card-topline">
-        <span className="company-initial" aria-hidden="true">{vacancy.company.charAt(0).toUpperCase()}</span>
+        <CompanyMark />
         <span className="job-company">{vacancy.company}</span>
       </div>
       <div className="job-card-content">

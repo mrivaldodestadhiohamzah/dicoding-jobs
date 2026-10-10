@@ -18,27 +18,27 @@ class DatabaseSeeder extends Seeder
         Vacancy::factory()->createMany([
             [
                 'title' => 'Senior Frontend Engineer',
-                'company' => 'Northstar Labs',
+                'company' => 'Bumi Belanja',
                 'location' => 'Jakarta, Indonesia',
                 'employment_type' => 'Full-time',
                 'work_arrangement' => 'Hybrid',
-                'description' => 'Build thoughtful product experiences with a collaborative team of engineers and designers. You will shape our component systems, improve accessibility, and help ship dependable features from discovery through delivery.',
+                'description' => 'Own the frontend of a growing online marketplace. You will work in TypeScript and React, improve our design system, and partner with product and backend engineers on checkout and catalog experiences.',
             ],
             [
                 'title' => 'Product Designer',
-                'company' => 'Kite Studio',
+                'company' => 'Studio Kertas',
                 'location' => 'Bandung, Indonesia',
                 'employment_type' => 'Full-time',
                 'work_arrangement' => 'Remote',
-                'description' => 'Lead product design from early research to polished interaction details. Partner closely with product and engineering to make complex workflows feel clear, useful, and distinctly human.',
+                'description' => 'Shape research and product decisions for tools used by independent businesses. You will map workflows, prototype in Figma, and work with engineers to make everyday tasks easier to understand.',
             ],
             [
                 'title' => 'Backend Engineer',
-                'company' => 'Harbor Systems',
+                'company' => 'Jalur Barang',
                 'location' => 'Singapore',
                 'employment_type' => 'Contract',
                 'work_arrangement' => 'On-site',
-                'description' => 'Design and operate APIs that support a growing logistics platform. Bring strong PHP or similar backend experience, an eye for data integrity, and a calm approach to solving production problems.',
+                'description' => 'Build the services behind a regional delivery platform. You will design PHP APIs, keep shipment data reliable, and work with operations to trace issues from a customer request to the final hand-off.',
             ],
         ]);
     }
