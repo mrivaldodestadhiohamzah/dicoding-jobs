@@ -33,8 +33,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-shell .eyebrow, .employer-band .eyebrow { color: #8e9bb1; }
 .hero-copy h1 { max-width: 650px; margin: 0; font-size: clamp(38px, 5.4vw, 66px); font-weight: 700; letter-spacing: -.065em; line-height: .98; }
 .hero-description { max-width: 470px; margin: 18px 0 0; color: #bdc3cd; font-size: 16px; line-height: 1.55; }
-.hero-aside { display: flex; align-items: flex-start; gap: 16px; padding-bottom: 4px; color: #bdc3cd; font-size: 13px; line-height: 1.55; }
-.aside-number { color: #7087d5; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
 
 .content-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 74px 0 110px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
@@ -135,7 +133,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .primary-nav > a:first-child { display: none; }
   .hero-inner { display: block; min-height: 0; padding: 58px 0 52px; }
   .hero-copy h1 { font-size: clamp(42px, 13vw, 64px); }
-  .hero-aside { margin-top: 44px; }
   .content-shell { padding: 54px 0 76px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
   .job-list { grid-template-columns: 1fr; }

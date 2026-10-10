@@ -30,10 +30,6 @@ export default function Home() {
             <h1>Find your next role.</h1>
             <p className="hero-description">Explore open positions and search by job title.</p>
           </div>
-          <div className="hero-aside">
-            <span className="aside-number">01</span>
-            <p>Search by title<br />to get started.</p>
-          </div>
         </div>
       </section>
 
